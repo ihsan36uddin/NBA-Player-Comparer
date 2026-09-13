@@ -30,7 +30,7 @@ The purpose of the project is to allow users to compare and analyse two NBA play
 Further analysis can be seen on the **More Stats** page with:
 - Line graphs across active seasons for: points, assists, FG%, 3pt%, and rebounds allowing comparison with a line for each player
 - A radar chart using a percentile system for each category to compare the "well-roundedness" of players and strengths and weaknesses
-- Allow the user to choose the x-axis and y-axis of a scatterplot to investigate any trends or correlation between two statistics.
+- An interactive scatterplow allowing the user to choose the x-axis and y-axis to investigate any trends or correlation between two statistics
 
 #### Technologies Used
 
