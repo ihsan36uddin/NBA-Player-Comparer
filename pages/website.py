@@ -179,20 +179,38 @@ def reset_inputs():
 st.markdown("# NBA COMPARER :basketball:", text_alignment="center")
 st.markdown("##### Compare two NBA players across a season of your choosing.", text_alignment="center")
 
-@st.cache_data
-def get_seasons_list():
-    output = playercareerstats.PlayerCareerStats(
-            per_mode36="PerGame",
-            player_id=2544 
-            )
-    df = output.season_totals_regular_season.get_data_frame()
-    seasons = df["SEASON_ID"].tolist()
-    return seasons
+seasons = [
+    "2001-02",
+    "2002-03",
+    "2003-04",
+    "2004-05",
+    "2005-06",
+    "2006-07",
+    "2007-08",
+    "2008-09",
+    "2009-10",
+    "2010-11",
+    "2011-12",
+    "2012-13",
+    "2013-14",
+    "2014-15",
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21",
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26",
+]
 
 if "season" not in st.session_state:
     st.session_state["season"] = st.session_state.get("the_season", "")
 selected_season = st.selectbox(f"Select the desired season:", 
-options=get_seasons_list(),
+options=seasons,
 index=None,
 key="season",
 placeholder=st.session_state["season"]
