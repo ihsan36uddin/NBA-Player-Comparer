@@ -1,28 +1,41 @@
 # NBA Player Comparer 
 
-#### Description:
-The project is a simple Python program that takes user input of a specific NBA Regular Season (e.g 2020-21), followed by the input of the name of two players.
+#### ℹ️ Description:
 
-The program then retrieves data from NBA.com using the 'nba_api' library and displays each player's:
+This project originally began as a terminal-based Python program (`project.py`) and was later developed into an interactive website using Streamlit.
 
-- Points per game
-- Field goal percentage
-- Free throw percentage
-- Three-point percentage
-- Rebounds per game
-- Assists per game
-- Steals per game
-- Blocks per game
-- Turnovers per game
+The purpose of the project is to allow users to compare and analyse two NBA players across a selected season and over the course of their careers. It uses the `nba_api` library to retrieve NBA data, pandas DataFrames to process and manipulate the data, and Plotly and Streamlit to create interactive visualisations.
 
-After displaying both players' statistics, the program will output a comparison, listing each category and the name of the player which performed better in said category.
+![NBA Player Comparer](https://github.com/ihsanyasinuddin-del/NBA-Player-Comparer/blob/main/nba_comparer.gif)
 
-The logic for the turnovers was written separately, as fewer turnovers is a better performance, as opposed to the rest of the statistics in which a higher number is superior.
+#### Features:
+- Select a season and enter two NBA players by entering their full names
+- Upon clicking compare the program will display:
+- The players's headshots, current team, height and position
+- View per-game statistics for:
+  - Points
+  - Three-point percentage
+  - Field goal percentage
+  - Free-throw percentage
+  - Rebounds
+  - Assists
+  - Steals
+  - Blocks
+  - Turnovers
+- Deltas showing the subsequent increase or decrease from the last season
+- A count of which player performed better in each category, totalling up the score and displaying it at the button
 
-The program also includes input validation, in which if a player's name is not found, the program will output an error message and ask again for the player's name. 
+#### More Stats
 
-If a player's name is found however they did not play in the season provided, the program informs the user and asks for another player's name.
+Further analysis can be seen on the **More Stats** page with:
+- Line graphs across active seasons for: points, assists, FG%, 3pt%, and rebounds allowing comparison with a line for each player
+- A radar chart using a percentile system for each category to compare the "well-roundedness" of players and strengths and weaknesses
+- Allow the user to choose the x-axis and y-axis of a scatterplot to investigate any trends or correlation between two statistics.
 
-The project contains a test file using 'pytest' which tests the player lookup, statistics retrieval, and statistics display functions.
+#### Technologies Used
 
-The program uses 'rich' to tidy up the appearance of the output in the terminal.
+- Python
+- Streamlit
+- pandas
+- Plotly
+- nba_api
