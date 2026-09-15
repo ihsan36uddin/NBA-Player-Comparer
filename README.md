@@ -2,7 +2,7 @@
 
 #### ℹ️ Description:
 
-This project originally began as a terminal-based Python program (`project.py`) and was later developed into an interactive website using Streamlit. The website can be found at [https://nba-player-comparer.streamlit.app/website](https://nba-player-comparer.streamlit.app/).
+This project originally began as a terminal-based Python program (`project.py`) and was later developed into an interactive website using Streamlit. The website can be found at [https://nba-player-comparer.streamlit.app/website](https://nba-player-comparer.streamlit.app/), or ran locally with ``` streamlit run app.py ```
 
 The purpose of the project is to allow users to compare and analyse two NBA players across a selected season and over the course of their careers. It uses the `nba_api` library to retrieve NBA data, pandas DataFrames to process and manipulate the data, and Plotly and Streamlit to create interactive visualisations.
 
