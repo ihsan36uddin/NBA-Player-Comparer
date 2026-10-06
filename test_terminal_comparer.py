@@ -1,7 +1,7 @@
 import pytest 
-from project import get_player
-from project import get_stats
-from project import display_stats
+from terminal_comparer import get_player
+from terminal_comparer import get_stats
+from terminal_comparer import display_stats
 
 def test_get_player():
     assert get_player("Stephen Curry") == (201939, "Stephen Curry")
