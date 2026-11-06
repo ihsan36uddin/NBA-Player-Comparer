@@ -66,8 +66,8 @@ def find_percentile(player_id, desired_stat, name):
     points1 = qualified_df.query(f"PLAYER_ID == {player_id}")[f"{desired_stat}"]
     if points1.empty:
             st.write(f"{name} has not played enough minutes to be displayed on the radar chart.")
-            worked = False
-            return worked
+            return False
+
     points = points1.iloc[0]
     # formula for calculating percentile
     for x in qualified_df[f"{desired_stat}"]:
